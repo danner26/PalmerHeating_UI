@@ -1,0 +1,14 @@
+{
+  "name": "palmer_heating_ui",
+  "version": "1.0.0",
+  "description": "Palmer Heating LLC Website UI",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "UI"
+  ],
+  "author": "Daniel W. Anner <daniel.anner@danstechsupport.com> (http://danstechsupport.com)",
+  "license": "ISC"
+}
