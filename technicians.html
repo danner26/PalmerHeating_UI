@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Palmer Heating LLC Website UI">
+    <meta name="author" content="Daniel W. Anner <daniel.anner@danstechsupport.com> (http://danstechsupport.com)">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>IMS - Technician Management</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="css/bootstrap-theme.css" rel="stylesheet" />-->
+    <!-- MetisMenu CSS -->
+    <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <!-- Timeline CSS -->
+    <link href="assets/css/timeline.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Morris Charts CSS -->
+    <link href="bower_components/morrisjs/morris.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Calendar -->
+    <link href="assets/css/responsive-calendar.css" rel="stylesheet" media="screen">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Palmer Heating, LLC.</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown" id="">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages scrollable-menu">
+                        <li style="width: 100%; text-align: center;">
+                            <strong>Client Requests</strong>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                            <em>2 Hours ago</em>
+                                        </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>John Doe</strong>
+                                    <span class="pull-right text-muted">
+                                            <em>13 Hours ago</em>
+                                        </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <strong>Jane Doe</strong>
+                                    <span class="pull-right text-muted">
+                                            <em>Yesterday</em>
+                                        </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Requests</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-tasks scrollable-menu">
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Requests Completed Today</strong>
+                                        <span class="pull-right text-muted">20% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+                                            <span class="sr-only">20% Completed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Client Requests In Progress</strong>
+                                        <span class="pull-right text-muted">50% Complete</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%">
+                                            <span class="sr-only">50% In Progress</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">
+                                <div>
+                                    <p>
+                                        <strong>Requests Not Processed</strong>
+                                        <span class="pull-right text-muted">30% Not Processed</span>
+                                    </p>
+                                    <div class="progress progress-striped active">
+                                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%">
+                                            <span class="sr-only">30% Not Processed</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>See All Tasks</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-tasks -->
+                </li>
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        </li>
+                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li><a href="index.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="employee_secretary.html"><i class="fa fa-dashboard fa-fw"></i> Secretary Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="technicians.html"><i class="fa fa-wrench fa-fw"></i> Technician Management</a>
+                        </li>
+                        <li>
+                          <a href="mydash_secretary.html"><i class="fa fa-dashboard fa-fw"></i> My Dashboard</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Technician Management</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" data-toggle="collapse" data-target="#technicians">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Technicians
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body collapse" id="technicians">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Name</th>
+                                            <th>Birthday</th>
+                                            <th>Active?</th>
+                                            <th>Weekly Tickets</th>
+                                            <th>More Info</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>001</td>
+                                            <td>John Doe</td>
+                                            <td>04/01/2016</td>
+                                            <td>Yes</td>
+                                            <td>6 Completed</td>
+                                            <!--Tickets completed each week-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 001</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>002</td>
+                                            <td>Jane Doe</td>
+                                            <td>04/01/2016</td>
+                                            <td>Yes</td>
+                                            <td>2 Completed</td>
+                                            <!--Tickets completed each week-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 002</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>003</td>
+                                            <td>John Doe</td>
+                                            <td>04/01/2016</td>
+                                            <td>Yes</td>
+                                            <td>8 Completed</td>
+                                            <!--Tickets completed each week-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 003</a></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                <div><a href="#" class="btn btn-lg btn-success btn-block">View All</a></div>
+                            </div>
+                            <!-- /.table-responsive -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" data-toggle="collapse" data-target="#calendar">
+                            <i class="fa fa-calendar fa-fw"></i> Calendar
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body collapse" id="calendar">
+                            <!-- Responsive calendar - START -->
+                            <div class="responsive-calendar">
+                                <div class="controls">
+                                    <a class="pull-left fa fa-chevron-left" data-go="prev"></a>
+                                    <h4><span data-head-year></span> <span data-head-month></span></h4>
+                                    <a class="pull-right fa fa-chevron-right" data-go="next"></a>
+                                </div>
+                                <hr/>
+                                <div class="day-headers">
+                                    <div class="day header">Mon</div>
+                                    <div class="day header">Tue</div>
+                                    <div class="day header">Wed</div>
+                                    <div class="day header">Thu</div>
+                                    <div class="day header">Fri</div>
+                                    <div class="day header">Sat</div>
+                                    <div class="day header">Sun</div>
+                                </div>
+                                <div class="days" data-group="days">
+                                    <!-- the place where days will be generated -->
+                                </div>
+                            </div>
+                            <!-- Responsive calendar - END -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="bower_components/raphael/raphael-min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="assets/js/sb-admin-2.js"></script>
+    <!-- Calendar -->
+    <script src="assets/js/responsive-calendar.js"></script>
+    <script>
+      $( document ).ready( function() {
+      $(".responsive-calendar").responsiveCalendar({
+        events: {
+          "2016-04-12": {"number": 3, "badgeClass": "badge-warning"},
+          "2016-04-17": {"number": 6, "badgeClass": "badge-warning"},
+          "2016-04-18": {"number": 2, "badgeClass": "badge-error"},
+          "2016-04-22": {"number": 1}}
+      });
+      });
+    </script>
+</body>
+
+</html>

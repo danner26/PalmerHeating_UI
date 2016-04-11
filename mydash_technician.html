@@ -21,6 +21,8 @@
     <link href="bower_components/morrisjs/morris.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- Calendar -->
+    <link href="assets/css/responsive-calendar.css" rel="stylesheet" media="screen">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -199,13 +201,10 @@
                                 <!-- /input-group -->
                             </li>
                             <li>
-                                <a href="employee_secretary.html"><i class="fa fa-dashboard fa-fw"></i> Secretary Dashboard</a>
+                                <a href="employee_technician.html"><i class="fa fa-dashboard fa-fw"></i> Technician Dashboard</a>
                             </li>
                             <li>
-                              <a href="technicians.html"><i class="fa fa-wrench fa-fw"></i> Technician Management</a>
-                            </li>
-                            <li>
-                              <a href="mydash_secretary.html"><i class="fa fa-dashboard fa-fw"></i> My Dashboard</a>
+                              <a href="mydash_technician.html"><i class="fa fa-dashboard fa-fw"></i> My Dashboard</a>
                             </li>
                         </ul>
                     </div>
@@ -217,203 +216,50 @@
             <div id="page-wrapper">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Secretary Dashboard</h1>
+                        <h1 class="page-header">My Dashboard</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- /.row -->
                 <div class="row">
-                  <div class="col-lg-3 col-md-6">
-                      <div class="panel panel-yellow">
-                          <div class="panel-heading">
-                              <div class="row">
-                                  <div class="col-xs-3" style="text-align:center;">
-                                      <i class="fa fa-exclamation fa-5x"></i>
-                                  </div>
-                                  <div class="col-xs-9 text-right">
-                                      <div class="huge">22</div>
-                                      <div>New Requests</div>
-                                  </div>
-                              </div>
+                  <div class="col-lg-12">
+                      <div class="panel panel-default">
+                          <div class="panel-heading" data-toggle="collapse" data-target="#calendar">
+                              <i class="fa fa-calendar fa-fw"></i> Calendar
                           </div>
-                          <a href="#">
-                              <div class="panel-footer" data-toggle="collapse" data-target="#new_requests">
-                                  <span class="pull-left">View Details</span>
-                                  <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                  <div class="clearfix"></div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body collapse" id="calendar">
+                              <!-- Responsive calendar - START -->
+                              <div class="responsive-calendar">
+                                  <div class="controls">
+                                      <a class="pull-left fa fa-chevron-left" data-go="prev"></a>
+                                      <h4><span data-head-year></span> <span data-head-month></span></h4>
+                                      <a class="pull-right fa fa-chevron-right" data-go="next"></a>
+                                  </div>
+                                  <hr/>
+                                  <div class="day-headers">
+                                      <div class="day header">Mon</div>
+                                      <div class="day header">Tue</div>
+                                      <div class="day header">Wed</div>
+                                      <div class="day header">Thu</div>
+                                      <div class="day header">Fri</div>
+                                      <div class="day header">Sat</div>
+                                      <div class="day header">Sun</div>
+                                  </div>
+                                  <div class="days" data-group="days">
+                                      <!-- the place where days will be generated -->
+                                  </div>
                               </div>
-                          </a>
+                              <!-- Responsive calendar - END -->
+                          </div>
+                          <!-- /.panel-body -->
                       </div>
+                      <!-- /.panel -->
                   </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-gears fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">12</div>
-                                        <div>In Progress</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div class="panel-footer" data-toggle="collapse" data-target="#in_progress">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-green">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-tasks fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">8</div>
-                                        <div>Completed</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div class="panel-footer" data-toggle="collapse" data-target="#completed">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-red">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-level-down fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">6</div>
-                                        <div>Low Inventory</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#" data-toggle="collapse" data-target="#notifications">
-                                <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="panel panel-default">
-                            <div class="panel-heading" data-toggle="collapse" data-target="#new_requests">
-                                <i class="fa fa-exclamation fa-fw"></i> New Requests
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body collapse" id="new_requests">
-                              <div class="table-responsive">
-                                  <table class="table table-bordered table-hover table-striped">
-                                      <thead>
-                                          <tr>
-                                              <th>#</th>
-                                              <th>Desired D&amp;T</th>
-                                              <th>Name</th>
-                                              <th>Brief Description</th>
-                                              <th>Full Ticket</th>
-                                          </tr>
-                                      </thead>
-                                      <tbody>
-                                          <tr>
-                                              <td>0263</td>
-                                              <td>06/01/2016 - 14:30</td>
-                                              <td>John Doe</td>
-                                              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in commodo tellus. Donec vehicula, sapien...</td> <!--15 word preview-->
-                                              <td><a href="#" class="btn btn-sm btn-primary btn-block">View 0263</a></td>
-                                          </tr>
-                                          <tr>
-                                              <td>0265</td>
-                                              <td>06/07/2016 - 10:15</td>
-                                              <td>Jane Doe</td>
-                                              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in commodo tellus. Donec vehicula, sapien...</td> <!--15 word preview-->
-                                              <td><a href="#" class="btn btn-sm btn-primary btn-block">View 0265</a></td>
-                                          </tr>
-                                          <tr>
-                                              <td>0264</td>
-                                              <td>06/14/2016 - 12:45</td>
-                                              <td>John Doe</td>
-                                              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in commodo tellus. Donec vehicula, sapien...</td> <!--15 word preview-->
-                                              <td><a href="#" class="btn btn-sm btn-primary btn-block">View 0264</a></td>
-                                          </tr>
-                                          <tr>
-                                              <td>0267</td>
-                                              <td>06/19/2016 - 18:00</td>
-                                              <td>John Doe</td>
-                                              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in commodo tellus. Donec vehicula, sapien...</td> <!--15 word preview-->
-                                              <td><a href="#" class="btn btn-sm btn-primary btn-block">View 0267</a></td>
-                                          </tr>
-                                          <tr>
-                                              <td>0268</td>
-                                              <td>06/22/2016 - 12:15</td>
-                                              <td>Jane Doe</td>
-                                              <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in commodo tellus. Donec vehicula, sapien...</td> <!--15 word preview-->
-                                              <td><a href="#" class="btn btn-sm btn-primary btn-block">View 0268</a></td>
-                                          </tr>
-                                      </tbody>
-                                  </table>
-                                  <div><a href="#" class="btn btn-lg btn-success btn-block">View All</a></div>
-                              </div>
-                              <!-- /.table-responsive -->
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-
-                    </div>
-                    <!-- /.col-lg-8 -->
-                    <div class="col-lg-4" data-toggle="collapse" data-target="#notifications">
-                        <div class="panel panel-default">
-                            <div class="panel-heading">
-                                <i class="fa fa-bell fa-fw"></i> Notifications
-                            </div>
-                            <!-- /.panel-heading -->
-                            <div class="panel-body collapse" id="notifications">
-                                <div class="list-group">
-                                    <a href="#" class="list-group-item" id="lgi-inv">
-                                        <i class="fa fa-warning fa-fw"></i> Low Inventory
-                                        <span class="pull-right text-muted small"><em>6 Items</em>
-                                        </span>
-                                    </a>
-                                    <a href="#" class="list-group-item" id="lgi-nrq">
-                                        <i class="fa fa-warning fa-exclamation" style="padding-left:6px; padding-right:7px;"></i> New Requests
-                                        <span class="pull-right text-muted small"><em>8 New Requests</em>
-                                        </span>
-                                    </a>
-
-                                </div>
-                                <!-- /.list-group -->
-                                <a href="#" class="btn btn-default btn-block">View All Alerts</a>
-                            </div>
-                            <!-- /.panel-body -->
-                        </div>
-                        <!-- /.panel -->
-                    </div>
-                    <!-- /.col-lg-4 -->
+                  <!-- /.col-lg-12 -->
                 </div>
                 <div class="row">
+                  <!-- /.col-lg-12 -->
                     <div class="col-lg-12">
                       <div class="panel panel-default">
                           <div class="panel-heading" data-toggle="collapse" data-target="#in_progress">
@@ -599,9 +445,19 @@
     <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
     <!-- Morris Charts JavaScript -->
     <script src="bower_components/raphael/raphael-min.js"></script>
-    <script src="bower_components/morrisjs/morris.min.js"></script>
-    <script src="assets/js/morris-data.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="assets/js/sb-admin-2.js"></script>
+    <!-- Calendar -->
+    <script src="assets/js/responsive-calendar.js"></script>
+    <script>
+      $( document ).ready( function() {
+      $(".responsive-calendar").responsiveCalendar({
+        events: {
+          "2016-04-12": {"number": 2, "badgeClass": "badge-warning"},
+          "2016-04-17": {"number": 3, "badgeClass": "badge-warning"},
+          "2016-04-18": {"number": 1, "badgeClass": "badge-error"}}
+      });
+      });
+    </script>
   </body>
 </html>

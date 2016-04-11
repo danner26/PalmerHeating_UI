@@ -199,7 +199,10 @@
                                 <!-- /input-group -->
                             </li>
                             <li>
-                                <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Technician Dashboard</a>
+                                <a href="employee_technician.html"><i class="fa fa-dashboard fa-fw"></i> Technician Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="mydash_technician.html"><i class="fa fa-dashboard fa-fw"></i> My Dashboard</a>
                             </li>
                         </ul>
                     </div>
@@ -217,6 +220,53 @@
                 </div>
                 <!-- /.row -->
                 <div class="row">
+
+                  <div class="col-lg-3 col-md-6">
+                      <div class="panel panel-primary">
+                          <div class="panel-heading">
+                              <div class="row">
+                                  <div class="col-xs-3">
+                                      <i class="fa fa-gears fa-5x"></i>
+                                  </div>
+                                  <div class="col-xs-9 text-right">
+                                      <div class="huge">12</div>
+                                      <div>In Progress</div>
+                                  </div>
+                              </div>
+                          </div>
+                          <a href="#">
+                              <div class="panel-footer" data-toggle="collapse" data-target="#in_progress">
+                                  <span class="pull-left">View Details</span>
+                                  <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                  <div class="clearfix"></div>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6">
+                      <div class="panel panel-green">
+                          <div class="panel-heading">
+                              <div class="row">
+                                  <div class="col-xs-3">
+                                      <i class="fa fa-tasks fa-5x"></i>
+                                  </div>
+                                  <div class="col-xs-9 text-right">
+                                      <div class="huge">8</div>
+                                      <div>Completed</div>
+                                  </div>
+                              </div>
+                          </div>
+                          <a href="#">
+                              <div class="panel-footer" data-toggle="collapse" data-target="#completed">
+                                  <span class="pull-left">View Details</span>
+                                  <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                  <div class="clearfix"></div>
+                              </div>
+                          </a>
+                      </div>
+                  </div>
+
                   <div class="col-lg-3 col-md-6">
                       <div class="panel panel-yellow">
                           <div class="panel-heading">
@@ -240,51 +290,6 @@
                       </div>
                   </div>
 
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-gears fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">12</div>
-                                        <div>In Progress</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div class="panel-footer" data-toggle="collapse" data-target="#in_progress">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="panel panel-green">
-                            <div class="panel-heading">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                        <i class="fa fa-tasks fa-5x"></i>
-                                    </div>
-                                    <div class="col-xs-9 text-right">
-                                        <div class="huge">8</div>
-                                        <div>Completed</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#">
-                                <div class="panel-footer">
-                                    <span class="pull-left">View Details</span>
-                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
-                                    <div class="clearfix"></div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
 
 
                     <div class="col-lg-3 col-md-6">
@@ -311,6 +316,103 @@
                     </div>
                 </div>
                 <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                      <div class="panel panel-default">
+                          <div class="panel-heading" data-toggle="collapse" data-target="#in_progress">
+                              <i class="fa fa-bar-chart-o fa-fw"></i> In Progress Requests
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body collapse" id="in_progress">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Desired D&amp;T</th>
+                                            <th>Appt. Meet?</th>
+                                            <th>Name</th>
+                                            <th>Brief Description</th>
+                                            <th>Full Ticket</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr value="Attended">
+                                            <td>0252</td>
+                                            <td>04/10/2016 - 14:30</td>
+                                            <td value="Yes">Yes</td>
+                                            <td>John Doe</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 0252</a></td>
+                                        </tr>
+                                        <tr value="Attended">
+                                            <td>0253</td>
+                                            <td>04/11/2016 - 14:30</td>
+                                            <td value="Yes">Yes</td>
+                                            <td>Jane Doe</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 0253</a></td>
+                                        </tr>
+                                        <tr value="inProgress">
+                                            <td>0256</td>
+                                            <td>04/11/2016 - 14:30</td>
+                                            <td value="In Progress">In Progress</td>
+                                            <td>Jane Doe</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 0256</a></td>
+                                        </tr>
+                                        <tr value="inProgress">
+                                            <td>0255</td>
+                                            <td>04/12/2016 - 14:30</td>
+                                            <td value="In Progress">In Progress</td>
+                                            <td>John Doe</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 0255</a></td>
+                                        </tr>
+                                        <tr value="inProgress">
+                                            <td>0254</td>
+                                            <td>04/12/2016 - 14:30</td>
+                                            <td value="In Progress">In Progress</td>
+                                            <td>John Doe</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 0254</a></td>
+                                        </tr>
+                                        <tr value="NotAttended">
+                                            <td>0257</td>
+                                            <td>04/13/2016 - 14:30</td>
+                                            <td value="No">No</td>
+                                            <td>John Doe</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 0257</a></td>
+                                        </tr>
+                                        <tr value="NotAttended">
+                                            <td>0259</td>
+                                            <td>04/13/2016 - 14:30</td>
+                                            <td value="No">No</td>
+                                            <td>John Doe</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 0259</a></td>
+                                        </tr>
+                                        <tr value="NotAttended">
+                                            <td>0260</td>
+                                            <td>04/14/2016 - 14:30</td>
+                                            <td value="No">No</td>
+                                            <td>Jane Doe</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 0260</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div><a href="#" class="btn btn-lg btn-success btn-block">View All</a></div>
+                            </div>
+                            <!-- /.table-responsive -->
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                      <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="panel panel-default">
@@ -406,179 +508,84 @@
                         <!-- /.panel -->
                     </div>
                     <!-- /.col-lg-4 -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                          <div class="panel panel-default">
-                              <div class="panel-heading" data-toggle="collapse" data-target="#in_progress">
-                                  <i class="fa fa-bar-chart-o fa-fw"></i> In Progress Requests
-                              </div>
-                              <!-- /.panel-heading -->
-                              <div class="panel-body collapse" id="in_progress">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Desired D&amp;T</th>
-                                                <th>Appt. Meet?</th>
-                                                <th>Name</th>
-                                                <th>Brief Description</th>
-                                                <th>Full Ticket</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr value="Attended">
-                                                <td>0252</td>
-                                                <td>04/10/2016 - 14:30</td>
-                                                <td value="Yes">Yes</td>
-                                                <td>John Doe</td>
-                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
-                                                <td><a href="#" class="btn btn-md btn-primary btn-block">View 0252</a></td>
-                                            </tr>
-                                            <tr value="Attended">
-                                                <td>0253</td>
-                                                <td>04/11/2016 - 14:30</td>
-                                                <td value="Yes">Yes</td>
-                                                <td>Jane Doe</td>
-                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
-                                                <td><a href="#" class="btn btn-md btn-primary btn-block">View 0253</a></td>
-                                            </tr>
-                                            <tr value="inProgress">
-                                                <td>0256</td>
-                                                <td>04/11/2016 - 14:30</td>
-                                                <td value="In Progress">In Progress</td>
-                                                <td>Jane Doe</td>
-                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
-                                                <td><a href="#" class="btn btn-md btn-primary btn-block">View 0256</a></td>
-                                            </tr>
-                                            <tr value="inProgress">
-                                                <td>0255</td>
-                                                <td>04/12/2016 - 14:30</td>
-                                                <td value="In Progress">In Progress</td>
-                                                <td>John Doe</td>
-                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
-                                                <td><a href="#" class="btn btn-md btn-primary btn-block">View 0255</a></td>
-                                            </tr>
-                                            <tr value="inProgress">
-                                                <td>0254</td>
-                                                <td>04/12/2016 - 14:30</td>
-                                                <td value="In Progress">In Progress</td>
-                                                <td>John Doe</td>
-                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
-                                                <td><a href="#" class="btn btn-md btn-primary btn-block">View 0254</a></td>
-                                            </tr>
-                                            <tr value="NotAttended">
-                                                <td>0257</td>
-                                                <td>04/13/2016 - 14:30</td>
-                                                <td value="No">No</td>
-                                                <td>John Doe</td>
-                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
-                                                <td><a href="#" class="btn btn-md btn-primary btn-block">View 0257</a></td>
-                                            </tr>
-                                            <tr value="NotAttended">
-                                                <td>0259</td>
-                                                <td>04/13/2016 - 14:30</td>
-                                                <td value="No">No</td>
-                                                <td>John Doe</td>
-                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
-                                                <td><a href="#" class="btn btn-md btn-primary btn-block">View 0259</a></td>
-                                            </tr>
-                                            <tr value="NotAttended">
-                                                <td>0260</td>
-                                                <td>04/14/2016 - 14:30</td>
-                                                <td value="No">No</td>
-                                                <td>Jane Doe</td>
-                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
-                                                <td><a href="#" class="btn btn-md btn-primary btn-block">View 0260</a></td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                    <div><a href="#" class="btn btn-lg btn-success btn-block">View All</a></div>
-                                </div>
-                                <!-- /.table-responsive -->
-                              </div>
-                              <!-- /.panel-body -->
-                          </div>
-                          <!-- /.panel -->
-                        </div>
-                        <!-- /.col-lg-12 -->
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                          <div class="panel panel-default">
-                              <div class="panel-heading" data-toggle="collapse" data-target="#completed">
-                                  <i class="fa fa-bar-chart-o fa-fw"></i> Completed Requests
-                              </div>
-                              <!-- /.panel-heading -->
-                              <div class="panel-body collapse" id="completed">
-                                <div class="table-responsive">
-                                    <table class="table table-bordered table-hover">
-                                        <thead>
-                                            <tr>
-                                                <th>#</th>
-                                                <th>Desired D&amp;T</th>
-                                                <th>Appt. Meet?</th>
-                                                <th>Name</th>
-                                                <th>Brief Description</th>
-                                                <th>Full Ticket</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr value="Completed">
-                                                <td>0251</td>
-                                                <td>04/01/2016 - 11:00</td>
-                                                <td value="Completed">Completed</td>
-                                                <td>John Doe</td>
-                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
-                                                <td><a href="#" class="btn btn-md btn-primary btn-block">View 0251</a></td>
-                                            </tr>
-                                            <tr value="Completed">
-                                                <td>0250</td>
-                                                <td>04/01/2016 - 12:15</td>
-                                                <td value="Completed">Completed</td>
-                                                <td>Jane Doe</td>
-                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
-                                                <td><a href="#" class="btn btn-md btn-primary btn-block">View 0250</a></td>
-                                            </tr>
-                                            <tr value="Completed">
-                                                <td>0249</td>
-                                                <td>03/31/2016 - 15:45</td>
-                                                <td value="Completed">Completed</td>
-                                                <td>John Doe</td>
-                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
-                                                <td><a href="#" class="btn btn-md btn-primary btn-block">View 0249</a></td>
-                                            </tr>
-                                            <tr value="Completed">
-                                                <td>0248</td>
-                                                <td>03/31/2016 - 14:15</td>
-                                                <td value="Completed">Completed</td>
-                                                <td>John Doe</td>
-                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
-                                                <td><a href="#" class="btn btn-md btn-primary btn-block">View 0248</a></td>
-                                            </tr>
-                                            <tr value="Completed">
-                                                <td>0247</td>
-                                                <td>03/30/2016 - 10:00</td>
-                                                <td value="Completed">Completed</td>
-                                                <td>Jane Doe</td>
-                                                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
-                                                <td><a href="#" class="btn btn-md btn-primary btn-block">View 0247</a></td>
-                                            </tr>
 
-                                        </tbody>
-                                    </table>
-                                    <div><a href="#" class="btn btn-lg btn-success btn-block">View All</a></div>
-                                </div>
-                                <!-- /.table-responsive -->
-                              </div>
-                              <!-- /.panel-body -->
-                          </div>
-                          <!-- /.panel -->
-                        </div>
-                        <!-- /.col-lg-12 -->
-                    </div>
+
                 </div>
                 <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-12">
+                      <div class="panel panel-default">
+                          <div class="panel-heading" data-toggle="collapse" data-target="#completed">
+                              <i class="fa fa-bar-chart-o fa-fw"></i> Completed Requests
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body collapse" id="completed">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Desired D&amp;T</th>
+                                            <th>Appt. Meet?</th>
+                                            <th>Name</th>
+                                            <th>Brief Description</th>
+                                            <th>Full Ticket</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr value="Completed">
+                                            <td>0251</td>
+                                            <td>04/01/2016 - 11:00</td>
+                                            <td value="Completed">Completed</td>
+                                            <td>John Doe</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 0251</a></td>
+                                        </tr>
+                                        <tr value="Completed">
+                                            <td>0250</td>
+                                            <td>04/01/2016 - 12:15</td>
+                                            <td value="Completed">Completed</td>
+                                            <td>Jane Doe</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 0250</a></td>
+                                        </tr>
+                                        <tr value="Completed">
+                                            <td>0249</td>
+                                            <td>03/31/2016 - 15:45</td>
+                                            <td value="Completed">Completed</td>
+                                            <td>John Doe</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 0249</a></td>
+                                        </tr>
+                                        <tr value="Completed">
+                                            <td>0248</td>
+                                            <td>03/31/2016 - 14:15</td>
+                                            <td value="Completed">Completed</td>
+                                            <td>John Doe</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 0248</a></td>
+                                        </tr>
+                                        <tr value="Completed">
+                                            <td>0247</td>
+                                            <td>03/30/2016 - 10:00</td>
+                                            <td value="Completed">Completed</td>
+                                            <td>Jane Doe</td>
+                                            <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td> <!--25 word preview-->
+                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 0247</a></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                <div><a href="#" class="btn btn-lg btn-success btn-block">View All</a></div>
+                            </div>
+                            <!-- /.table-responsive -->
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                      <!-- /.panel -->
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
             </div>
             <!-- /#page-wrapper -->
 
