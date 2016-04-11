@@ -8,7 +8,7 @@
     <meta name="description" content="Palmer Heating LLC Website UI">
     <meta name="author" content="Daniel W. Anner <daniel.anner@danstechsupport.com> (http://danstechsupport.com)">
     <link href="favicon.ico" rel="shortcut icon">
-    <title>IMS - Technician Management</title>
+    <title>IMS - Inventory Management</title>
     <!-- Bootstrap core CSS -->
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!--<link href="css/bootstrap-theme.css" rel="stylesheet" />-->
@@ -22,9 +22,7 @@
     <link href="bower_components/morrisjs/morris.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!-- Calendar -->
-    <link href="assets/css/responsive-calendar.css" rel="stylesheet" media="screen">
-
+    <link href="assets/css/overlay.css" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -209,7 +207,7 @@
                             <a href="technicians.html"><i class="fa fa-wrench fa-fw"></i> Technician Management</a>
                         </li>
                         <li>
-                          <a href="mydash_secretary.html"><i class="fa fa-dashboard fa-fw"></i> My Dashboard</a>
+                            <a href="mydash_secretary.html"><i class="fa fa-dashboard fa-fw"></i> My Dashboard</a>
                         </li>
                         <li>
                             <a href="inv_sec.html"><i class="fa fa-book fa-fw"></i> Inventory</a>
@@ -221,114 +219,123 @@
             <!-- /.navbar-static-side -->
         </nav>
 
-        <div id="page-wrapper">
+          <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">Technician Management</h1>
+                    <h1 class="page-header">Inventory Management</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" data-toggle="collapse" data-target="#technicians">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Technicians
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body collapse" id="technicians">
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-hover">
-                                    <thead>
-                                        <tr>
-                                            <th>#</th>
-                                            <th>Name</th>
-                                            <th>Birthday</th>
-                                            <th>Active?</th>
-                                            <th>Weekly Tickets</th>
-                                            <th>More Info</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>001</td>
-                                            <td>John Doe</td>
-                                            <td>04/01/2016</td>
-                                            <td>Yes</td>
-                                            <td>6 Completed</td>
-                                            <!--Tickets completed each week-->
-                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 001</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>002</td>
-                                            <td>Jane Doe</td>
-                                            <td>04/01/2016</td>
-                                            <td>Yes</td>
-                                            <td>2 Completed</td>
-                                            <!--Tickets completed each week-->
-                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 002</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>003</td>
-                                            <td>John Doe</td>
-                                            <td>04/01/2016</td>
-                                            <td>Yes</td>
-                                            <td>8 Completed</td>
-                                            <!--Tickets completed each week-->
-                                            <td><a href="#" class="btn btn-md btn-primary btn-block">View 003</a></td>
-                                        </tr>
+              <div class="table-responsive">
+                  <table class="table table-bordered table-hover">
+                      <thead>
+                          <tr>
+                              <th>#</th>
+                              <th>Name</th>
+                              <th>Description</th>
+                              <th>Quantity</th>
+                              <th>Location</th>
+                              <th>Price</th>
+                              <th>Edit/Delete</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr value="warning">
+                              <td>00001</td>
+                              <td>1/2" 90 Degree Elbow</td>
+                              <td>Lorem ipsum</td>
+                              <td>15</td>
+                              <td>Warehouse</td>
+                              <td>$1.33</td>
+                              <td><a href="#" class="btn btn-md btn-primary btn-block">Edit</a><a href="#" class="btn btn-md btn-danger btn-block">Delete</a></td>
+                          </tr>
+                          <tr value="low">
+                              <td>00002</td>
+                              <td>1" 10ft Pipe</td>
+                              <td>Lorem ipsum</td>
+                              <td>8</td>
+                              <td>Warehouse</td>
+                              <td>$12.95</td>
+                              <td><a href="#" class="btn btn-md btn-primary btn-block">Edit</a><a href="#" class="btn btn-md btn-danger btn-block">Delete</a></td>
+                          </tr>
+                          <tr value="in">
+                              <td>00003</td>
+                              <td>3/4" Ball Valve</td>
+                              <td>Lorem ipsum</td>
+                              <td>20</td>
+                              <td>Warehouse</td>
+                              <td>$4.65</td>
+                              <td><a href="#" class="btn btn-md btn-primary btn-block">Edit</a><a href="#" class="btn btn-md btn-danger btn-block">Delete</a></td>
+                          </tr>
+                          <tr value="in">
+                              <td>00004</td>
+                              <td>1/8" Angled Steam Vent</td>
+                              <td>Lorem ipsum</td>
+                              <td>20</td>
+                              <td>Truck &amp; Warehouse</td>
+                              <td>$5.67</td>
+                              <td><a href="#" class="btn btn-md btn-primary btn-block">Edit</a><a href="#" class="btn btn-md btn-danger btn-block">Delete</a></td>
+                          </tr>
 
-                                    </tbody>
-                                </table>
-                                <div><a href="#" class="btn btn-lg btn-success btn-block">View All</a></div>
-                            </div>
-                            <!-- /.table-responsive -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-12 -->
-
-                <div class="col-lg-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading" data-toggle="collapse" data-target="#calendar">
-                            <i class="fa fa-calendar fa-fw"></i> Calendar
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body collapse" id="calendar">
-                            <!-- Responsive calendar - START -->
-                            <div class="responsive-calendar">
-                                <div class="controls">
-                                    <a class="pull-left fa fa-chevron-left" data-go="prev"></a>
-                                    <h4><span data-head-year></span> <span data-head-month></span></h4>
-                                    <a class="pull-right fa fa-chevron-right" data-go="next"></a>
-                                </div>
-                                <hr/>
-                                <div class="day-headers">
-                                    <div class="day header">Mon</div>
-                                    <div class="day header">Tue</div>
-                                    <div class="day header">Wed</div>
-                                    <div class="day header">Thu</div>
-                                    <div class="day header">Fri</div>
-                                    <div class="day header">Sat</div>
-                                    <div class="day header">Sun</div>
-                                </div>
-                                <div class="days" data-group="days">
-                                    <!-- the place where days will be generated -->
-                                </div>
-                            </div>
-                            <!-- Responsive calendar - END -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-12 -->
+                      </tbody>
+                  </table>
+                  <div><a class="overlay-trigger-support btn btn-lg btn-success btn-block" data-overlay="overlay-form" id="addinvitem" >Add Inventory Item</a></div>
+              </div>
+              <!-- /.table-responsive -->
             </div>
+          </div>
         </div>
         <!-- /#page-wrapper -->
-
+        <div id="overlay-form" class="overlay">
+            <div class="overlay-inner" style="border-radius:6px;">
+              <div id="center">
+                <h3 id="formHeader">Add Inventory</h3></div>
+              <form method="get" action="" name="formToSubmit" enctype="text/plain" id="formToSubmit" target="_blank">
+                <div class="form-group">
+                  <div id="left">
+                    <label for="inputName">Number:</label>
+                  </div>
+                  <input type="text" id="UID" name="UID" class="form-control" value="0005" readonly="true" />
+                </div>
+                <div class="form-group">
+                  <div id="left">
+                    <label for="inputEmail">Name:</label>
+                  </div>
+                  <input type="text" id="invName" name="inventoryName" class="form-control" placeholder="Enter Inventory Item Name" />
+                </div>
+                <div class="form-group">
+                  <div id="left">
+                    <label for="subject">Brief Description:</label>
+                  </div>
+                  <input type="text" id="desc" name="invDesc" class="form-control" value="" />
+                </div>
+                <div class="form-group">
+                  <div id="left">
+                    <label for="subject">Summer Limit:</label>
+                  </div>
+                  <input type="text" id="sumInvLim" name="summerInvLim" class="form-control" value="" />
+                </div>
+                <div class="form-group">
+                  <div id="left">
+                    <label for="subject">Winter Limit:</label>
+                  </div>
+                  <input type="text" id="winInvLim" name="winterInvLim" class="form-control" value="" />
+                </div>
+                <div class="form-group">
+                  <div id="left">
+                    <label for="subject">Price:</label>
+                  </div>
+                  <input type="text" id="price" name="invPrice" class="form-control" value="" />
+                </div>
+                <div id="center">
+                  <button type="submit" class="btn btn-success" id="submitForm">Submit</button>
+                  <button type="reset" class="btn btn-danger" id="resetMe">Reset</button>
+                </div>
+              </form>
+            </div>
+          </div>
     </div>
     <!-- /#wrapper -->
 
@@ -342,19 +349,8 @@
     <script src="bower_components/raphael/raphael-min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="assets/js/sb-admin-2.js"></script>
-    <!-- Calendar -->
-    <script src="assets/js/responsive-calendar.js"></script>
-    <script>
-      $( document ).ready( function() {
-      $(".responsive-calendar").responsiveCalendar({
-        events: {
-          "2016-04-12": {"number": 3, "badgeClass": "badge-warning"},
-          "2016-04-17": {"number": 6, "badgeClass": "badge-warning"},
-          "2016-04-18": {"number": 2, "badgeClass": "badge-error"},
-          "2016-04-22": {"number": 1}}
-      });
-      });
-    </script>
+    <script src="assets/js/overlay.js"></script>
+
 </body>
 
 </html>
