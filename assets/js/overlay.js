@@ -1,5 +1,5 @@
-(function ($) {
-    $('.overlay-trigger-support').on('click', function (event) {
+(function($) {
+    $('.overlay-trigger-support').on('click', function(event) {
         event.preventDefault();
         var overlay = $(this).data('overlay');
 
@@ -13,7 +13,7 @@
         $(id).addClass('overlay-open');
         $('body').addClass('overlay-view');
 
-        $(id).on('click', function (event) {
+        $(id).on('click', function(event) {
             // Verify that only the outer wrapper was clicked.
             if (event.target.id == overlay) {
                 $(id).removeClass('overlay-open');
@@ -21,7 +21,7 @@
             }
         });
 
-        $(document).keyup(function (event) {
+        $(document).keyup(function(event) {
             // Verify that the esc key was pressed.
             if (event.keyCode == 27) {
                 $(id).removeClass('overlay-open');

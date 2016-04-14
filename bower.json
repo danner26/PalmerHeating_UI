@@ -1,14 +1,14 @@
 {
-  "name": "startbootstrap-sb-admin-2",
-  "version": "1.0.7",
-  "homepage": "http://startbootstrap.com/template-overviews/sb-admin-2/",
+  "name": "PalmerHeating",
+  "version": "1.0.0",
+  "homepage": "http://devteam.danstechsupport.com",
   "authors": [
-    "David Miller"
+    "Daniel W. Anner"
   ],
-  "description": "A free, open source, Bootstrap admin theme created by Start Bootstrap",
+  "description": "Palmer Heating LLC Website UI Revision 1 for Systems Analysis &amp; Design CSIS 2210",
   "keywords": [
     "bootstrap",
-    "theme"
+    "UIs"
   ],
   "license": "Apache",
   "ignore": [

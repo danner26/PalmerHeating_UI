@@ -23,7 +23,6 @@
     background: #FFF;
     margin: 5rem auto;
     padding: 4rem;
-    max-width: 700px;
 }
 .admin-bar .overlay {
     top: 32px;
@@ -52,14 +51,13 @@ html {
     background: #337ab7;
 }
 .overlay-inner {
-    max-width: 40rem;
     margin: 5rem;
     padding: 2rem;
     background: #FFF;
 }
 @media screen and (min-width: 52rem) {
     .overlay-inner {
-        margin-left: auto;
-        margin-right: auto;
+        margin-left: 3rem;
+        margin-right: 3rem;
     }
 }

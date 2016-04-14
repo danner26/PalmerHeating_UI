@@ -209,7 +209,7 @@
                             <a href="technicians.html"><i class="fa fa-wrench fa-fw"></i> Technician Management</a>
                         </li>
                         <li>
-                          <a href="mydash_secretary.html"><i class="fa fa-dashboard fa-fw"></i> My Dashboard</a>
+                            <a href="mydash_secretary.html"><i class="fa fa-dashboard fa-fw"></i> My Dashboard</a>
                         </li>
                         <li>
                             <a href="inv_sec.html"><i class="fa fa-book fa-fw"></i> Inventory</a>
@@ -345,15 +345,27 @@
     <!-- Calendar -->
     <script src="assets/js/responsive-calendar.js"></script>
     <script>
-      $( document ).ready( function() {
-      $(".responsive-calendar").responsiveCalendar({
-        events: {
-          "2016-04-12": {"number": 3, "badgeClass": "badge-warning"},
-          "2016-04-17": {"number": 6, "badgeClass": "badge-warning"},
-          "2016-04-18": {"number": 2, "badgeClass": "badge-error"},
-          "2016-04-22": {"number": 1}}
-      });
-      });
+        $(document).ready(function() {
+            $(".responsive-calendar").responsiveCalendar({
+                events: {
+                    "2016-04-12": {
+                        "number": 3,
+                        "badgeClass": "badge-warning"
+                    },
+                    "2016-04-17": {
+                        "number": 6,
+                        "badgeClass": "badge-warning"
+                    },
+                    "2016-04-18": {
+                        "number": 2,
+                        "badgeClass": "badge-error"
+                    },
+                    "2016-04-22": {
+                        "number": 1
+                    }
+                }
+            });
+        });
     </script>
 </body>
 
