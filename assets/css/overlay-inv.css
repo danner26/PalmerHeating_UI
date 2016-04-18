@@ -1,0 +1,63 @@
+.overlay-inv {
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    bottom: 110%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 10000;
+    opacity: 0;
+    background: #4D4D4D;
+    transition: opacity 200ms linear, bottom 0s linear 200ms;
+}
+.overlay-open {
+    bottom: 0;
+    opacity: 1;
+    transition: opacity 200ms linear, bottom 0s linear;
+}
+.overlay-view {
+    overflow: hidden;
+}
+.overlay-form .overlay-inner {
+    background: #FFF;
+    margin: 5rem auto;
+    padding: 4rem;
+}
+.admin-bar .overlay {
+    top: 32px;
+}
+@media screen and (max-width: 782px) {
+    .admin-bar .overlay {
+        top: 46px;
+    }
+}
+html {
+    background-color: #2d2d2d;
+    background-size: cover;
+    background-position: center center;
+}
+
+/*.overlay-trigger {
+  max-width: 14rem;
+  font-size: 1.5rem;
+  font-family: 'Oxygen', sans-serif;
+  text-align: center;
+  text-decoration: none;
+  transition: all 200ms linear;
+}*/
+
+.overlay-trigger:hover {
+    background: #337ab7;
+}
+.overlay-inner {
+    margin: 5rem;
+    padding: 2rem;
+    background: #FFF;
+}
+@media screen and (min-width: 52rem) {
+    .overlay-inner {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
