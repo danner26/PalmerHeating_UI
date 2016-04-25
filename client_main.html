@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Palmer Heating LLC Website UI">
+    <meta name="author" content="Daniel W. Anner <daniel.anner@danstechsupport.com> (http://danstechsupport.com)">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>IMS - Employee Main</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="css/bootstrap-theme.css" rel="stylesheet" />-->
+    <!-- MetisMenu CSS -->
+    <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <!-- Timeline CSS -->
+    <link href="assets/css/timeline.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/overlay-ticket.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/overlay-req.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/comments.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/inv.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Palmer Heating, LLC.</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+                <li class="dropdown" id="">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-messages scrollable-menu">
+                        <li style="width: 100%; text-align: center;">
+                            <strong>Client Requests</strong>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a>
+                                <div>
+                                    <strong>John Smith</strong>
+                                    <span class="pull-right text-muted">
+                                            <em>2 Hours ago</em>
+                                        </span>
+                                </div>
+                                <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a class="text-center" href="#">
+                                <strong>Read All Notifications</strong>
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- /.dropdown-messages -->
+                </li>
+                <!-- /.dropdown -->
+
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a><i class="fa fa-user fa-fw"></i> User Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href="index.html"><i class="fa fa-sign-out fa-fw"></i> Logout</a></li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="client_main.html"><i class="fa fa-dashboard fa-fw"></i> My Dashboard</a>
+                        </li>
+                        <li>
+                            <a class="overlay-trigger-request" data-overlay="overlay-req" id="newReq"><i class="fa fa-support fa-fw"></i> New Request</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Welcome, <span id="name">John Doe</span></h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" data-toggle="collapse" data-target="#in_progress">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> In Progress Requests
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body collapsed" id="in_progress">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Desired D&amp;T</th>
+                                            <th>Appt. Met?</th>
+                                            <th>Name</th>
+                                            <th>Brief Description</th>
+                                            <th>Full Ticket</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr value="NotAttended">
+                                            <td id="num">0257</td>
+                                            <td id="dt">04/13/2016 - 14:30</td>
+                                            <td id="status" value="No">No</td>
+                                            <td id="user">John Doe</td>
+                                            <td id="ticDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td>
+                                            <!--25 word preview-->
+                                            <td><a class="overlay-trigger-support btn btn-md btn-primary btn-block" data-overlay="overlay-form" id="viewTicket">View 0257</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" data-toggle="collapse" data-target="#completed">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Completed Requests
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body collapse" id="completed">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Desired D&amp;T</th>
+                                            <th>Appt. Met?</th>
+                                            <th>Name</th>
+                                            <th>Brief Description</th>
+                                            <th>Full Ticket</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr value="Completed">
+                                            <td id="num">0248</td>
+                                            <td id="dt">03/31/2016 - 14:15</td>
+                                            <td id="status" value="Completed">Completed</td>
+                                            <td id="user">John Doe</td>
+                                            <td id="ticDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td>
+                                            <!--25 word preview-->
+                                            <td><a class="overlay-trigger-support btn btn-md btn-primary btn-block" data-overlay="overlay-form" id="viewTicket">View 0248</a></td>
+                                        </tr>
+                                        <tr value="Completed">
+                                            <td id="num">0247</td>
+                                            <td id="dt">03/30/2016 - 10:00</td>
+                                            <td id="status" value="Completed">Completed</td>
+                                            <td id="user">Jane Doe</td>
+                                            <td id="ticDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eu diam sapien. Suspendisse imperdiet est lectus, non euismod tellus semper sit amet. Nunc mauris mauris...</td>
+                                            <!--25 word preview-->
+                                            <td><a class="overlay-trigger-support btn btn-md btn-primary btn-block" data-overlay="overlay-form" id="viewTicket">View 0247</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /#page-wrapper -->
+        <div id="overlay-form" class="overlay">
+            <div class="overlay-inner" style="border-radius:6px;">
+                <div id="center">
+                    <h3 id="formHeader"></h3></div>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Desired D&amp;T</th>
+                            <th>Appt. Met?</th>
+                            <th>Name</th>
+                            <th>Tech Assigned</th>
+                            <th>Brief Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="ticketNum"></td>
+                            <td id="dateTime"></td>
+                            <td id="apptStatus"></td>
+                            <td id="userName"></td>
+                            <td id="tech">Mike</td>
+                            <td id="desc"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <hr />
+                <!-- Comments -->
+                <div style="width:auto;">
+                    <div style="width:auto;">
+                        <div class="titleBox">
+                            <label>Comments</label>
+                        </div>
+                        <div class="actionBox">
+                            <ul class="commentList" id="commentListHere">
+                                <li>
+                                    <div class="commenterImage">
+                                        <img src="http://lorempixel.com/50/50/business/2/" />
+                                    </div>
+                                    <div class="commentText">
+                                        <p class="">Hello this is a test comment.</p> <span class="date sub-text">on March 5th, 2014</span>
+                                    </div>
+                                </li>
+                            </ul>
+                            <form class="form-inline" role="form">
+                                <div class="form-group">
+                                    <input class="form-control" type="text" id="newComment" placeholder="Your comments" />
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-default" type="button" id="commentAdd">Add</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <!-- end comments -->
+            </div>
+        </div>
+
+        <div id="overlay-req" class="overlay-req">
+            <div class="overlay-inner" style="border-radius:6px;">
+                <div id="center">
+                    <h3 id="formHeader"></h3></div>
+                <form name="submissionForm" class="form-horizontal" action='client_main.html' novalidate>
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Full name</label>
+                        <div class="col-xs-4">
+                            <input type="text" class="form-control" name="firstName" ng-model="newListingData.firstName" placeholder="First name" value="John" disabled/>
+                        </div>
+                        <div class="col-xs-4">
+                            <input type="text" class="form-control" name="lastName" ng-model="newListingData.lastName" placeholder="Last name" value="Doe" disabled/>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Email address</label>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" name="email" ng-model="newListingData.contactEmail" placeholder="john.doe@domain.com" value="john.doe@gmail.com" disabled/>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Contact Phone</label>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" name="phone" ng-model="newListingData.contactPhone" placeholder="123-456-7890" value="732-818-0000" disabled />
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <!-- Address -->
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Street Address</label>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" name="notEmpty" ng-model="newListingData.fieldAddress" placeholder="123 Street Address" value="1214 Rahway Avenue" disabled />
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">City/Town</label>
+                        <div class="col-xs-8">
+                            <input type="text" class="form-control" name="notEmpty" ng-model="newListingData.fieldCity" placeholder="City" value="Rahway" disabled />
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">State</label>
+                        <div class="col-xs-8">
+                            <select class="form-control" id="state" ng-model="newListingData.fieldState" name="state" disabled>
+                                <option value="Alaska">Alaska</option>
+                                <option value="Alabama">Alabama</option>
+                                <option value="Arkansas">Arkansas</option>
+                                <option value="Arizona">Arizona</option>
+                                <option value="California">California</option>
+                                <option value="Colorado">Colorado</option>
+                                <option value="Connecticut">Connecticut</option>
+                                <option value="Delaware">Delaware</option>
+                                <option value="Florida">Florida</option>
+                                <option value="Georgia">Georgia</option>
+                                <option value="Hawaii">Hawaii</option>
+                                <option value="Iowa">Iowa</option>
+                                <option value="Idaho">Idaho</option>
+                                <option value="Illinois">Illinois</option>
+                                <option value="Indiana">Indiana</option>
+                                <option value="Kansas">Kansas</option>
+                                <option value="Kentucky">Kentucky</option>
+                                <option value="Louisiana">Louisiana</option>
+                                <option value="Massachusetts">Massachusetts</option>
+                                <option value="Maryland">Maryland</option>
+                                <option value="Maine">Maine</option>
+                                <option value="Michigan">Michigan</option>
+                                <option value="Minnesota">Minnesota</option>
+                                <option value="Missouri">Missouri</option>
+                                <option value="Mississippi">Mississippi</option>
+                                <option value="Montana">Montana</option>
+                                <option value="North Carolina">North Carolina</option>
+                                <option value="North Dakota">North Dakota</option>
+                                <option value="Nebraska">Nebraska</option>
+                                <option value="New Hampshire">New Hampshire</option>
+                                <option value="New Jersey" selected>New Jersey</option>
+                                <option value="New Mexico">New Mexico</option>
+                                <option value="Nevada">Nevada</option>
+                                <option value="New York">New York</option>
+                                <option value="Ohio">Ohio</option>
+                                <option value="Oklahoma">Oklahoma</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Pennsylvania">Pennsylvania</option>
+                                <option value="Puerto Rico">Puerto Rico</option>
+                                <option value="Rhode Island">Rhode Island</option>
+                                <option value="South Carolina">South Carolina</option>
+                                <option value="South Dakota">South Dakota</option>
+                                <option value="Tennessee">Tennessee</option>
+                                <option value="Texas">Texas</option>
+                                <option value="Utah">Utah</option>
+                                <option value="Virginia">Virginia</option>
+                                <option value="Vermont">Vermont</option>
+                                <option value="Washington">Washington</option>
+                                <option value="Wisconsin">Wisconsin</option>
+                                <option value="West Virginia">West Virginia</option>
+                                <option value="Wyoming">Wyoming</option>
+                            </select>
+                        </div>
+                    </div>
+                    <hr />
+                    <div style="width: 100%; text-align:center;"><u>Please describe your issue in a few words so we can better assist you.</u></div>
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label">Issue</label>
+                        <div class="col-xs-8">
+                            <textarea class="form-control" rows="5"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label"></label>
+                        <div class="col-xs-8">
+                            <input type="submit" class="btn btn-primary" value="Submit" />
+                            <input type="reset" class="btn btn-danger" value="Reset" />
+                            <div ng-show="error" class="text-danger">
+                                <strong ng-bind="error"></strong>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /#wrapper -->
+
+        <!-- jQuery -->
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+        <!-- Morris Charts JavaScript -->
+        <script src="bower_components/raphael/raphael-min.js"></script>
+        <!-- Custom Theme JavaScript -->
+        <script src="assets/js/sb-admin-2.js"></script>
+        <!-- Custom Script -->
+        <script src="assets/js/overlay.js"></script>
+        <script src="assets/js/overlay-req.js"></script>
+        <!-- Custom Script -->
+        <script type="text/javascript">
+            $('body').on('click', 'a#viewTicket', function() {
+                /*alert($(this).parent().parent().find('#num').html());*/
+                document.getElementById('formHeader').innerHTML = ("Ticket #" + $(this).parent().parent().find('#num').html());
+                document.getElementById('ticketNum').innerHTML = $(this).parent().parent().find('#num').html();
+                document.getElementById('dateTime').innerHTML = $(this).parent().parent().find('#dt').html();
+                document.getElementById('apptStatus').innerHTML = $(this).parent().parent().find('#status').html();
+                document.getElementById('userName').innerHTML = $(this).parent().parent().find('#user').html();
+                document.getElementById('desc').innerHTML = $(this).parent().parent().find('#ticDesc').html();
+            });
+            $('body').on('click', 'button#commentAdd', function() {
+                if (document.getElementById('newComment').value == "") {
+
+                } else {
+                    var dateObj = new Date();
+                    var month = dateObj.getMonth(); //months from 1-12
+                    var day = dateObj.getDate();
+                    var year = dateObj.getFullYear();
+
+                    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                    $('#commentListHere').append('<li><div class="commenterImage"><img src="http://lorempixel.com/50/50/business/7/" /></div><div class="commentText"><p class="">' + document.getElementById('newComment').value +
+                        '</p> <span class="date sub-text">on ' + monthNames[month] + ' ' + day + ',' + year + '</span></div></li>');
+                    document.getElementById('newComment').value = "";
+                }
+            });
+            $('body').on('click', 'button#submitInvReq', function() {
+                if (document.getElementById('validation').value == "YES") {
+                    $('#overlay-inv').removeClass('overlay-open');
+                    $('body').removeClass('overlay-view');
+                    document.getElementById('validation').value = "";
+                } else {
+                    alert('Please either type YES to approve the inventory request, or click close to push off the inventory request.');
+                }
+            });
+            $('body').on('click', 'button#closeInvReq', function() {
+                $('#overlay-inv').removeClass('overlay-open');
+                $('body').removeClass('overlay-view');
+                document.getElementById('validation').value = "";
+            });
+        </script>
+</body>
+
+</html>

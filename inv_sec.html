@@ -23,6 +23,7 @@
     <!-- Custom Fonts -->
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/overlay.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/gridster.css" rel="stylesheet" type="text/css">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -244,39 +245,39 @@
                         <tbody>
                             <tr value="warning">
                                 <td>00001</td>
-                                <td>1/2" 90 Degree Elbow</td>
+                                <td id="invName">1/2" 90 Degree Elbow</td>
                                 <td>Lorem ipsum</td>
                                 <td>15</td>
                                 <td>Warehouse</td>
                                 <td>$1.33</td>
-                                <td><a href="#" class="btn btn-md btn-primary btn-block">Edit</a><a href="#" class="btn btn-md btn-danger btn-block">Delete</a></td>
+                                <td><a href="#" class="btn btn-md btn-primary btn-block">Edit</a><a href="#" class="btn btn-md btn-danger btn-block" id="deleteInv">Delete</a></td>
                             </tr>
                             <tr value="low">
                                 <td>00002</td>
-                                <td>1" 10ft Pipe</td>
+                                <td id="invName">1" 10ft Pipe</td>
                                 <td>Lorem ipsum</td>
                                 <td>8</td>
                                 <td>Warehouse</td>
                                 <td>$12.95</td>
-                                <td><a href="#" class="btn btn-md btn-primary btn-block">Edit</a><a href="#" class="btn btn-md btn-danger btn-block">Delete</a></td>
+                                <td><a href="#" class="btn btn-md btn-primary btn-block">Edit</a><a href="#" class="btn btn-md btn-danger btn-block" id="deleteInv">Delete</a></td>
                             </tr>
                             <tr value="in">
                                 <td>00003</td>
-                                <td>3/4" Ball Valve</td>
+                                <td id="invName">3/4" Ball Valve</td>
                                 <td>Lorem ipsum</td>
                                 <td>20</td>
                                 <td>Warehouse</td>
                                 <td>$4.65</td>
-                                <td><a href="#" class="btn btn-md btn-primary btn-block">Edit</a><a href="#" class="btn btn-md btn-danger btn-block">Delete</a></td>
+                                <td><a href="#" class="btn btn-md btn-primary btn-block">Edit</a><a href="#" class="btn btn-md btn-danger btn-block" id="deleteInv">Delete</a></td>
                             </tr>
                             <tr value="in">
                                 <td>00004</td>
-                                <td>1/8" Angled Steam Vent</td>
+                                <td id="invName">1/8" Angled Steam Vent</td>
                                 <td>Lorem ipsum</td>
                                 <td>20</td>
                                 <td>Truck &amp; Warehouse</td>
                                 <td>$5.67</td>
-                                <td><a href="#" class="btn btn-md btn-primary btn-block">Edit</a><a href="#" class="btn btn-md btn-danger btn-block">Delete</a></td>
+                                <td><a href="#" class="btn btn-md btn-primary btn-block">Edit</a><a href="#" class="btn btn-md btn-danger btn-block" id="deleteInv">Delete</a></td>
                             </tr>
 
                         </tbody>
@@ -350,7 +351,14 @@
     <!-- Custom Theme JavaScript -->
     <script src="assets/js/sb-admin-2.js"></script>
     <script src="assets/js/overlay.js"></script>
-
+    <script src="assetts/js/gridster.js"></script>
+    <script>
+        $('body').on('click', 'a#deleteInv', function() {
+            if (confirm('Are you sure you want to delete ' + $(this).parent().parent().find('#invName').html() + '?')) {
+                $(this).parent().parent().remove();
+            }
+        });
+    </script>
 </body>
 
 </html>

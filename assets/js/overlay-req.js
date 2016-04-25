@@ -1,5 +1,5 @@
 (function($) {
-    $('.overlay-trigger-support').on('click', function(event) {
+    $('.overlay-trigger-request').on('click', function(event) {
         event.preventDefault();
         var overlay = $(this).data('overlay');
 

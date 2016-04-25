@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Palmer Heating LLC Website UI">
+    <meta name="author" content="Daniel W. Anner <daniel.anner@danstechsupport.com> (http://danstechsupport.com)">
+    <link href="favicon.ico" rel="shortcut icon">
+    <title>IMS - Home</title>
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!--<link href="css/bootstrap-theme.css" rel="stylesheet" />-->
+    <!-- MetisMenu CSS -->
+    <link href="bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <!-- Timeline CSS -->
+    <link href="assets/css/timeline.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="assets/css/sb-admin-2.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Palmer Heating, LLC.</a>
+            </div>
+            <!-- /.navbar-header -->
+
+            <ul class="nav navbar-top-links navbar-right">
+
+                <!-- /.dropdown -->
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu dropdown-user">
+                        <li><a href="index.html"><i class="fa fa-home fa-fw"></i> Home</a></li>
+                        <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> Login</a></li>
+                    </ul>
+                    <!-- /.dropdown-user -->
+                </li>
+                <!-- /.dropdown -->
+            </ul>
+            <!-- /.navbar-top-links -->
+
+            <div class="navbar-default sidebar" role="navigation">
+                <div class="sidebar-nav navbar-collapse">
+                    <ul class="nav" id="side-menu">
+                        <li class="sidebar-search">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <!-- /input-group -->
+                        </li>
+                        <li>
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.sidebar-collapse -->
+            </div>
+            <!-- /.navbar-static-side -->
+        </nav>
+
+        <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h1 class="page-header">Welcome to Palmer Heating, LLC.</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+
+            </div>
+            <!-- /.row -->
+            <!--<form name="signupForm">
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Full Name</label>
+                    <div class="col-xs-4">
+                        <input type="text"
+                    </div>
+                </div>
+            </form>-->
+            <form name="submissionForm" class="form-horizontal" action='client_main.html' novalidate>
+                <!-- Name -->
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Full name</label>
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" name="firstName" ng-model="newListingData.firstName" placeholder="First name" />
+                    </div>
+                    <div class="col-xs-4">
+                        <input type="text" class="form-control" name="lastName" ng-model="newListingData.lastName" placeholder="Last name" />
+                    </div>
+                </div>
+
+                <!-- Email -->
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Email address</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" name="email" ng-model="newListingData.contactEmail" placeholder="john.doe@domain.com" />
+                    </div>
+                </div>
+
+                <!-- Phone -->
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Contact Phone</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" name="phone" ng-model="newListingData.contactPhone" placeholder="" />
+                    </div>
+                </div>
+
+                <hr />
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">Street Address</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" name="notEmpty" ng-model="newListingData.fieldAddress" placeholder="123 Street Address" />
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">City/Town</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control" name="notEmpty" ng-model="newListingData.fieldCity" placeholder="City" />
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="form-group">
+                    <label class="col-xs-3 control-label">State</label>
+                    <div class="col-xs-8">
+                        <select class="form-control" id="state" ng-model="newListingData.fieldState" name="state">
+                            <option value="Alaska">Alaska</option>
+                            <option value="Alabama">Alabama</option>
+                            <option value="Arkansas">Arkansas</option>
+                            <option value="Arizona">Arizona</option>
+                            <option value="California">California</option>
+                            <option value="Colorado">Colorado</option>
+                            <option value="Connecticut">Connecticut</option>
+                            <option value="Delaware">Delaware</option>
+                            <option value="Florida">Florida</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Hawaii">Hawaii</option>
+                            <option value="Iowa">Iowa</option>
+                            <option value="Idaho">Idaho</option>
+                            <option value="Illinois">Illinois</option>
+                            <option value="Indiana">Indiana</option>
+                            <option value="Kansas">Kansas</option>
+                            <option value="Kentucky">Kentucky</option>
+                            <option value="Louisiana">Louisiana</option>
+                            <option value="Massachusetts">Massachusetts</option>
+                            <option value="Maryland">Maryland</option>
+                            <option value="Maine">Maine</option>
+                            <option value="Michigan">Michigan</option>
+                            <option value="Minnesota">Minnesota</option>
+                            <option value="Missouri">Missouri</option>
+                            <option value="Mississippi">Mississippi</option>
+                            <option value="Montana">Montana</option>
+                            <option value="North Carolina">North Carolina</option>
+                            <option value="North Dakota">North Dakota</option>
+                            <option value="Nebraska">Nebraska</option>
+                            <option value="New Hampshire">New Hampshire</option>
+                            <option value="New Jersey">New Jersey</option>
+                            <option value="New Mexico">New Mexico</option>
+                            <option value="Nevada">Nevada</option>
+                            <option value="New York">New York</option>
+                            <option value="Ohio">Ohio</option>
+                            <option value="Oklahoma">Oklahoma</option>
+                            <option value="Oregon">Oregon</option>
+                            <option value="Pennsylvania">Pennsylvania</option>
+                            <option value="Puerto Rico">Puerto Rico</option>
+                            <option value="Rhode Island">Rhode Island</option>
+                            <option value="South Carolina">South Carolina</option>
+                            <option value="South Dakota">South Dakota</option>
+                            <option value="Tennessee">Tennessee</option>
+                            <option value="Texas">Texas</option>
+                            <option value="Utah">Utah</option>
+                            <option value="Virginia">Virginia</option>
+                            <option value="Vermont">Vermont</option>
+                            <option value="Washington">Washington</option>
+                            <option value="Wisconsin">Wisconsin</option>
+                            <option value="West Virginia">West Virginia</option>
+                            <option value="Wyoming">Wyoming</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="form-group">
+                    <label class="col-xs-3 control-label"></label>
+                    <div class="col-xs-8">
+                        <input type="submit" class="btn btn-primary" value="Submit" />
+                        <input type="reset" class="btn btn-danger" value="Reset" />
+                        <div ng-show="error" class="text-danger">
+                            <strong ng-bind="error"></strong>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- /.row -->
+        </div>
+        <!-- /#page-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- jQuery -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="assets/js/sb-admin-2.js"></script>
+</body>
+
+</html>

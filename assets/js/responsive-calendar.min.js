@@ -356,7 +356,7 @@
             events: {},
             time: void 0,
             allRows: true,
-            startFromSunday: false,
+            startFromSunday: true,
             activateNonCurrentMonths: false,
             monthChangeAnimation: true,
             onInit: void 0,

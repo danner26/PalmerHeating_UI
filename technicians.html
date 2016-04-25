@@ -24,6 +24,7 @@
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Calendar -->
     <link href="assets/css/responsive-calendar.css" rel="stylesheet" media="screen">
+    <link href="assets/css/overlay.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -296,7 +297,7 @@
                             <i class="fa fa-calendar fa-fw"></i> Calendar
                         </div>
                         <!-- /.panel-heading -->
-                        <div class="panel-body collapse" id="calendar">
+                        <div class="panel-body collapsed" id="calendar">
                             <!-- Responsive calendar - START -->
                             <div class="responsive-calendar">
                                 <div class="controls">
@@ -306,13 +307,13 @@
                                 </div>
                                 <hr/>
                                 <div class="day-headers">
+                                    <div class="day header">Sun</div>
                                     <div class="day header">Mon</div>
                                     <div class="day header">Tue</div>
                                     <div class="day header">Wed</div>
                                     <div class="day header">Thu</div>
                                     <div class="day header">Fri</div>
                                     <div class="day header">Sat</div>
-                                    <div class="day header">Sun</div>
                                 </div>
                                 <div class="days" data-group="days">
                                     <!-- the place where days will be generated -->
@@ -328,7 +329,31 @@
             </div>
         </div>
         <!-- /#page-wrapper -->
-
+        <div id="overlay-form" class="overlay" onclick="$('#overlay-form').removeClass('overlay-open')">
+            <div class="overlay-inner" style="border-radius:6px;">
+                <div id="center" style="width:100%;">
+                    <h4 id="formHeader" style="text-align:center;"></h4></div>
+                <hr />
+                <table class="table table-bordered table-hover" id="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Technician</th>
+                            <th>Time</th>
+                            <th>Ticket #</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <tr>
+                            <td id="number"></td>
+                            <td id="tech"></td>
+                            <td id="time"></td>
+                            <td id="ticket"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
     <!-- /#wrapper -->
 
@@ -344,24 +369,79 @@
     <script src="assets/js/sb-admin-2.js"></script>
     <!-- Calendar -->
     <script src="assets/js/responsive-calendar.js"></script>
+    <script src="assets/js/overlay.js"></script>
     <script>
         $(document).ready(function() {
+            function addLeadingZero(num) {
+                if (num < 10) {
+                    return "0" + num;
+                } else {
+                    return "" + num;
+                }
+            }
             $(".responsive-calendar").responsiveCalendar({
                 events: {
-                    "2016-04-12": {
-                        "number": 3,
-                        "badgeClass": "badge-warning"
-                    },
-                    "2016-04-17": {
-                        "number": 6,
-                        "badgeClass": "badge-warning"
-                    },
-                    "2016-04-18": {
+                    "2016-04-11": {
                         "number": 2,
-                        "badgeClass": "badge-error"
+                        "badgeClass": "badge-warning",
+                        "dayEvents": [{
+                            "Technician": "John Doe",
+                            "Time": "12:30 PM",
+                            "Ticket": "0272"
+                        }, {
+                            "Technician": "Jane Doe",
+                            "Time": "12:30 PM",
+                            "Ticket": "0273"
+                        }]
                     },
-                    "2016-04-22": {
-                        "number": 1
+                    "2016-04-14": {
+                        "number": 1,
+                        "badgeClass": "badge-warning",
+                        "dayEvents": [{
+                            "Technician": "John Doe",
+                            "Time": "11:30 PM",
+                            "Ticket": "0274"
+                        }]
+                    },
+                    "2016-04-19": {
+                        "number": 2,
+                        "badgeClass": "badge-warning",
+                        "dayEvents": [{
+                            "Technician": "John Doe",
+                            "Time": "12:00 PM",
+                            "Ticket": "0276"
+                        }, {
+                            "Technician": "Jane Doe",
+                            "Time": "12:30 PM",
+                            "Ticket": "0277"
+                        }]
+                    },
+                },
+                onDayClick: function(events) {
+                    var thisDayEvent, key;
+                    key = $(this).data('year') + '-' + addLeadingZero($(this).data('month')) + '-' + addLeadingZero($(this).data('day'));
+                    if (typeof events[key] == 'undefined') {
+                        alert("No events today.")
+                    } else {
+                        thisDayEvent = events[key];
+                        //alert("There are " + thisDayEvent.number + " meetings scheduled for today.");
+                        $('#overlay-form').addClass('overlay-open');
+                        document.getElementById('formHeader').innerHTML = "There are " + thisDayEvent.number + " meetings scheduled for today.";
+                        var table = document.getElementById("table");
+                        table.innerHTML =
+                            "<thead><tr><th>#</th><th>Technician</th><th>Time</th><th>Ticket #</th></tr></thead><tbody id='tableBody'><tr><td id='number'></td><td id='tech'></td><td id='time'></td><td id='ticket'></td></tr></tbody>"
+                        table.deleteRow(1);
+                        for (i = 0; i < thisDayEvent.number; i++) {
+                            var row = table.insertRow(i + 1);
+                            var cell1 = row.insertCell(0);
+                            var cell2 = row.insertCell(1);
+                            var cell3 = row.insertCell(2);
+                            var cell4 = row.insertCell(3);
+                            cell1.innerHTML = i + 1;
+                            cell2.innerHTML = thisDayEvent.dayEvents[i].Technician;
+                            cell3.innerHTML = thisDayEvent.dayEvents[i].Time;
+                            cell4.innerHTML = thisDayEvent.dayEvents[i].Ticket;
+                        }
                     }
                 }
             });
